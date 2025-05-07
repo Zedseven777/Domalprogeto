@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>AstroPuxadas</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #f2f2f2;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+    }
+
+    header {
+      position: relative;
+      height: 300px;
+      background-image: url('https://i.postimg.cc/HVrM3fmm/topo.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(13, 13, 13, 0.6);
+      z-index: 0;
+    }
+
+    header h1,
+    header p {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #9b00ff;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .card {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 10px #000;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: #9b00ff;
+    }
+
+    .price {
+      font-size: 1.4em;
+      margin: 10px 0;
+      color: #ffcc00;
+    }
+
+    button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    footer {
+      background-color: #111;
+      color: #888;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AstroPuxadas</h1>
+    <p>Escolha seu plano e receba acesso imediato</p>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2>1Day</h2>
+      <p>Plano de acesso por 1 dia</p>
+      <div class="price">R$ 10,00</div>
+      <button onclick="comprar()">Comprar</button>
+    </div>
+    <div class="card">
+      <h2>15Day</h2>
+      <p>Plano de acesso por 15 dias</p>
+      <div class="price">R$ 20,00</div>
+      <button onclick="comprar()">Comprar</button>
+    </div>
+    <div class="card">
+      <h2>1 Month</h2>
+      <p>Acesso por 1 mês completo</p>
+      <div class="price">R$ 30,00</div>
+      <button onclick="comprar()">Comprar</button>
+    </div>
+    <div class="card">
+      <h2>2 Month</h2>
+      <p>Acesso por 2 meses</p>
+      <div class="price">R$ 50,00</div>
+      <button onclick="comprar()">Comprar</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 AstroPuxadas. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function comprar() {
+      window.open("https://t.me/AstroTCP", "_blank");
+    }
+  </script>
+
+</body>
+</html>
